@@ -1,0 +1,35 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/hosted-ai
+note: >-
+  No first-party client SDK was found on npm, PyPI, Packagist, NuGet, RubyGems,
+  crates.io, Maven Central or pkg.go.dev. Hosted·ai publishes first-party code
+  through its GitHub organization (github.com/hosted-ai): a reference dashboard
+  application and a WHMCS billing integration module. These are official
+  first-party packages but not general-purpose API client libraries, so no SDKs
+  pointer is emitted.
+packages:
+- language: typescript
+  registry: github
+  name: packet-oss
+  repo: https://github.com/hosted-ai/packet-oss
+  install: 'curl -fsSL https://raw.githubusercontent.com/hosted-ai/packet-oss/main/install.sh | sudo bash'
+  official: true
+  license: MIT
+  kind: reference-application
+  description: >-
+    Full-featured GPU cloud platform dashboard (Next.js 16 / React 19 / Prisma /
+    MariaDB / Stripe) powered by the hosted.ai GPU infrastructure API. Fork and
+    deploy to run your own GPUaaS business.
+- language: php
+  registry: github
+  name: hostedai-whmcs
+  repo: https://github.com/hosted-ai/hostedai-whmcs
+  install: Clone or download main.zip and copy into WHMCS crons/, includes/hooks/, modules/servers/
+  official: true
+  license: MIT
+  kind: integration-module
+  description: >-
+    WHMCS billing module integrating hosted·ai teams — creation, management and
+    billing (monthly recurring and prepaid wallet), auto suspend/unsuspend, and
+    invoice/wallet cron jobs. Requires PHP 8.2+ with ionCube (WHMCS 9.0+).

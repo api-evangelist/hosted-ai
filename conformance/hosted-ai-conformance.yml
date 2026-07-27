@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: derived
+source:
+- https://docs.hosted.ai/user-panel/faqs/api-faqs
+- https://docs.hosted.ai/admin-panel/gpuaas/gpuaas-infrastructure-api
+note: >-
+  Derived from the documented REST surface and auth model. No published
+  certification / compliance program (SOC 2, ISO 27001, PCI, HIPAA, FedRAMP) was
+  found, so no Compliance pointer is emitted.
+standards:
+- id: rest
+  conforms: true
+  evidence: Resource-oriented HTTP API with GET/POST/PUT/DELETE over /api paths.
+- id: http-bearer-auth
+  conforms: true
+  evidence: 'Authorization: Bearer YOUR_API_KEY documented in API FAQ.'
+- id: oauth2
+  conforms: true
+  evidence: OAuth authorize flow recommended for marketplace integrations (Admin Panel 2.4.1).
+- id: openapi-swagger
+  conforms: true
+  evidence: API is Swagger-generated (550 documented operations at Admin Panel 2.4.1); spec not publicly downloadable.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors are plain HTTP status codes; no application/problem+json envelope documented.
+- id: pagination
+  conforms: false
+  evidence: No pagination convention documented.
+- id: idempotency
+  conforms: false
+  evidence: No idempotency-key contract documented.

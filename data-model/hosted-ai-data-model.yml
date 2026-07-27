@@ -1,0 +1,56 @@
+generated: '2026-07-19'
+method: derived
+source: https://docs.hosted.ai/admin-panel/gpuaas/gpuaas-infrastructure-api
+note: >-
+  Entity-relationship graph derived from the documented GPUaaS Infrastructure
+  API resource paths and their path parameters. No OpenAPI schema file is
+  published, so relationships are inferred from the URL structure and documented
+  operations rather than $ref links.
+entities:
+- name: region
+  description: A deployment region a GPUaaS instance belongs to.
+  id_field: region
+- name: gpuaas_instance
+  description: A GPUaaS instance (top-level GPU service scope).
+  id_field: gpuaasId
+- name: node
+  description: A physical GPU/NPU host joined to a GPUaaS cluster.
+  id_field: nodeId
+- name: pool
+  description: A GPU pool carved out of a GPUaaS instance's assigned GPUs.
+  id_field: poolId
+- name: gpu
+  description: An individual GPU device discovered on a node and assignable to a pool.
+- name: npu
+  description: An individual NPU device discovered on a node.
+- name: floating_ip
+  description: A floating-IP mapping managed for GPUaaS (added in 2.4.1).
+relationships:
+- from: gpuaas_instance
+  to: pool
+  type: has_many
+  via: gpuaasId
+- from: pool
+  to: gpu
+  type: has_many
+  via: poolId
+- from: gpuaas_instance
+  to: node
+  type: has_many
+  via: gpuaasId
+- from: node
+  to: gpu
+  type: has_many
+  via: nodeId
+- from: node
+  to: npu
+  type: has_many
+  via: nodeId
+- from: gpuaas_instance
+  to: region
+  type: belongs_to
+  via: region
+- from: pool
+  to: gpuaas_instance
+  type: belongs_to
+  via: gpuaasId

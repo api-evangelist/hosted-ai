@@ -1,0 +1,49 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.hosted.ai/releases-notes/release-api-changelogs
+docs: https://docs.hosted.ai/releases-notes/release-api-changelogs
+scheme: semver
+current_version: 2.4.1
+surfaces:
+- Admin Panel API
+- User Panel API
+note: >-
+  Hosted·ai publishes dated API changelogs per release, separately for the Admin
+  Panel API and the User Panel API, plus integrator migration guides between
+  minor versions. Entries below capture the recent window; the live changelog is
+  the source of truth.
+entries:
+- version: 2.4.1
+  surface: Admin Panel API
+  breaking: true
+  highlights:
+  - 20 new endpoints (546 registered routes / 550 documented Swagger operations, up from 526 / 499).
+  - 51 new DTO definitions.
+  - 'Breaking: rootfs_persistence_capable removed from node-level DTOs; now read from pool objects.'
+  - GPUaaS Floating IP management (5 endpoints — create/list/update/delete floating-IP mappings).
+  - KVM high-availability control (4 endpoints — enable/disable HA, status, force-remove cluster node).
+  - Marketplace pod operations (4 endpoints — RootFS status, factory reset, reconciliation inventory).
+  - Sync & storage features (7 endpoints — pod/team sync, storage availability, recipe execution logs).
+  - '~38 pre-existing 2.4.0 KVM node-management routes newly documented in Swagger.'
+  - 'Deprecation: plaintext marketplace token linking marked legacy; OAuth authorize flow recommended.'
+  url: https://docs.hosted.ai/releases-notes/release-api-changelogs/admin-panel/241-api-changelogs
+- version: 2.4.0
+  surface: Admin Panel + User Panel API
+  breaking: false
+  highlights:
+  - Admin Panel and User Panel API 2.4 changelogs published.
+  - Integrator migration guides published for Admin Panel and User Panel (2.3 -> 2.4).
+  url: https://docs.hosted.ai/releases-notes/release-api-changelogs/admin-panel/24-api-changelogs
+- version: 2.2
+  surface: Admin Panel + User Panel API
+  breaking: false
+  highlights:
+  - Admin CP release 2.2 API changelog.
+  - User Panel release 2.2 API changelog.
+  url: https://docs.hosted.ai/releases-notes/release-api-changelogs/admin-panel/api-changelog-admin-cp-release-22
+- version: 2.1
+  surface: Admin Panel API
+  breaking: false
+  highlights:
+  - 2.1 API changelog published.
+  url: https://docs.hosted.ai/releases-notes/release-api-changelogs/21-api-changelog

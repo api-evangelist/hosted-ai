@@ -1,0 +1,70 @@
+generated: '2026-07-19'
+method: derived
+status: candidate
+source: https://docs.hosted.ai/admin-panel/gpuaas/gpuaas-infrastructure-api
+note: >-
+  No official hosted/remote MCP server was found for Hosted·ai. This is a
+  CANDIDATE tool list derived from the documented GPUaaS Infrastructure (Admin
+  Panel) API endpoints — one tool per documented operation. Base URL is per
+  deployment (https://USER_PANEL_URL/api); auth is a bearer API token.
+server:
+  name: hosted-ai
+  transport: http
+tools:
+- name: create_gpu_pool
+  description: Create a new GPU pool.
+  source_operation: 'POST /gpuaas/pool/create'
+- name: list_gpu_pools
+  description: List all pools for a GPUaaS instance.
+  source_operation: 'GET /gpuaas/{gpuaasId}/pool/list'
+- name: get_gpu_pool
+  description: Fetch a pool's configuration.
+  source_operation: 'GET /gpuaas/pool/{poolId}'
+- name: get_pool_metrics
+  description: Obtain pool performance metrics.
+  source_operation: 'GET /gpuaas/pool/{poolId}/metrics'
+- name: delete_gpu_pool
+  description: Remove a GPU pool.
+  source_operation: 'DELETE /gpuaas/pool/{poolId}/delete'
+- name: add_gpus_to_pool
+  description: Assign GPUs to a pool.
+  source_operation: 'POST /gpuaas/pool/{poolId}/add_gpus'
+- name: remove_gpus_from_pool
+  description: Unassign GPUs from a pool.
+  source_operation: 'POST /gpuaas/pool/{poolId}/remove_gpus'
+- name: list_available_gpus
+  description: List unassigned GPUs for a GPUaaS instance.
+  source_operation: 'GET /gpuaas/{gpuaasId}/pool/available_gpus'
+- name: add_node
+  description: Provision a new GPUaaS node.
+  source_operation: 'POST /gpuaas/node/add'
+- name: edit_node
+  description: Modify a node configuration.
+  source_operation: 'PUT /gpuaas/node/{nodeId}/edit'
+- name: delete_node
+  description: Remove a node.
+  source_operation: 'DELETE /gpuaas/node/{nodeId}/delete'
+- name: list_nodes
+  description: Display regional nodes.
+  source_operation: 'GET /gpuaas/node/list'
+- name: get_node
+  description: Access node details.
+  source_operation: 'GET /gpuaas/node/{nodeId}'
+- name: reboot_node
+  description: Restart a node.
+  source_operation: 'POST /gpuaas/node/reboot'
+- name: get_node_logs
+  description: Retrieve node logs.
+  source_operation: 'GET /gpuaas/node/{nodeId}/logs'
+- name: scan_gpus
+  description: Discover GPU devices on a node.
+  source_operation: 'GET /gpuaas/node/scan_gpus'
+- name: scan_npus
+  description: Discover NPU devices on a node.
+  source_operation: 'GET /gpuaas/node/scan_npus'
+- name: list_regions
+  description: List deployment regions.
+  source_operation: 'GET /gpuaas/list/regions'
+- name: get_gpuaas_instance
+  description: Check GPUaaS instance status.
+  source_operation: 'GET /gpuaas/{gpuaasId}'

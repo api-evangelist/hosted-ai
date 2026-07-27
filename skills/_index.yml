@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: generated
+source: >-
+  Packaged Agent Skills generated from Hosted·ai's documented GPUaaS
+  Infrastructure (Admin Panel) API. Every step is grounded in a REST operation
+  documented verbatim at docs.hosted.ai (there is no downloadable OpenAPI, so
+  operations are cited as METHOD + path). Cross-cutting rules cite
+  ../authentication/, ../conventions/ and ../errors/.
+skills:
+- file: hosted-ai-provision-gpu-pool.md
+  name: Provision a GPU pool on a node
+  api: https://docs.hosted.ai/admin-panel/gpuaas/gpuaas-infrastructure-api
+  operations:
+  - 'POST /gpuaas/node/add'
+  - 'GET /gpuaas/node/scan_gpus'
+  - 'POST /gpuaas/pool/create'
+  - 'POST /gpuaas/pool/{poolId}/add_gpus'
+- file: hosted-ai-monitor-gpuaas.md
+  name: Inventory and monitor GPUaaS capacity
+  api: https://docs.hosted.ai/admin-panel/gpuaas/gpuaas-infrastructure-api
+  operations:
+  - 'GET /gpuaas/list/regions'
+  - 'GET /gpuaas/node/list'
+  - 'GET /gpuaas/{gpuaasId}/pool/list'
+  - 'GET /gpuaas/pool/{poolId}/metrics'

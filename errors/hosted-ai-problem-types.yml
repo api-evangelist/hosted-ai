@@ -1,0 +1,33 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.hosted.ai/user-panel/faqs/api-faqs
+format: http-status
+note: >-
+  Hosted·ai documents standard HTTP status codes for the REST API in its API
+  FAQs; it does not publish an RFC 9457 application/problem+json error registry
+  or a distinct error-code catalog. Codes below are the documented status codes
+  captured verbatim from the API FAQ.
+problems:
+- status: 200
+  title: OK
+  meaning: Request succeeded.
+- status: 201
+  title: Created
+  meaning: Resource created successfully.
+- status: 400
+  title: Bad Request
+  meaning: The request was malformed or missing required parameters.
+- status: 401
+  title: Unauthorized
+  meaning: >-
+    Authentication is required or the API token is invalid/expired. Docs
+    recommend creating a new unrestricted token when troubleshooting.
+- status: 403
+  title: Forbidden
+  meaning: The authenticated token lacks permission for the requested action.
+- status: 404
+  title: Not Found
+  meaning: The requested resource does not exist.
+- status: 500
+  title: Internal Server Error
+  meaning: An unexpected server-side error occurred.

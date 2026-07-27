@@ -1,0 +1,47 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.hosted.ai/user-panel/faqs/api-faqs
+docs:
+- https://docs.hosted.ai/user-panel/faqs/api-faqs
+- https://docs.hosted.ai/admin-panel/gpuaas/gpuaas-infrastructure-api
+authentication:
+  style: bearer-token
+  header: 'Authorization: Bearer YOUR_API_KEY'
+  ref: authentication/hosted-ai-authentication.yml
+base_url:
+  pattern: https://USER_PANEL_URL/api
+  note: >-
+    White-label / per-deployment. Every service-provider instance serves the
+    API from its own User Panel host under the /api path; there is no single
+    shared public host.
+http_methods:
+  GET: retrieve resources
+  POST: create resources
+  PUT: update resources
+  DELETE: remove resources
+error_envelope:
+  style: http-status
+  documented_codes: [200, 201, 400, 401, 403, 404, 500]
+  ref: errors/hosted-ai-problem-types.yml
+date_handling:
+  note: >-
+    Dates supplied without a timestamp are automatically given a midnight
+    timestamp (00:00:00). Querying the same date as both start and end returns
+    zero results — supply a range or explicit times.
+versioning:
+  scheme: semver
+  current: 2.4.1
+  documented: Swagger-generated; changelogs published per Admin Panel and User Panel release
+  ref: lifecycle/hosted-ai-lifecycle.yml
+idempotency:
+  supported: false
+  note: No idempotency-key header or idempotency contract is documented.
+pagination:
+  documented: false
+  note: >-
+    Pagination is not documented in the API FAQ; list endpoints exist
+    (e.g. /gpuaas/{gpuaasId}/pool/list, /gpuaas/node/list) but no cursor/offset
+    convention is published.
+rate_limiting:
+  documented: false
+  note: No rate-limit signaling documented.

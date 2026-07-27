@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source:
+- https://docs.hosted.ai/releases-notes/release-api-changelogs
+- https://www.hosted.ai/pricing
+versioning:
+  scheme: semver
+  current: 2.4.1
+  docs: https://docs.hosted.ai/releases-notes/release-api-changelogs
+  note: Swagger-generated API; per-release Admin Panel and User Panel changelogs + migration guides.
+deprecation:
+  policy_url: https://docs.hosted.ai/releases-notes/release-api-changelogs/admin-panel/241-api-changelogs
+  documented: true
+  note: >-
+    Deprecations are announced in the release API changelogs and paired with
+    integrator migration guides between minor versions. As of Admin Panel 2.4.1,
+    plaintext marketplace token linking is marked legacy in favor of the OAuth
+    authorize flow.
+  examples:
+  - Plaintext marketplace token linking marked legacy (2.4.1); use OAuth authorize flow.
+  - rootfs_persistence_capable relocated from node-level to pool-level DTOs (2.4.1, breaking).
+sla:
+  uptime_target: null
+  support: 24x7 support included, 15-minute SLA
+  source: https://www.hosted.ai/pricing
+status_page: null
+status_page_note: No public status page was found (status.hosted.ai did not resolve).
+migration_guides:
+- https://docs.hosted.ai/releases-notes/release-api-changelogs/admin-panel/admin-panel-api-23-24-integrator-migration-guide
+- https://docs.hosted.ai/releases-notes/release-api-changelogs/user-panel/user-panel-api-23-24-integrator-migration-guide

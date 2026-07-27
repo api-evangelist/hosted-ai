@@ -1,8 +1,31 @@
 aid: hosted-ai
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hosted-ai.png
 name: Hosted·ai
-description: 'Hosted·ai is a company surfaced as a portfolio company of creandum and added to the API
-  Evangelist network as a stub for enrichment. Sector: ai. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  Hosted·ai is a San Jose, California software company (founded 2024, public
+  launch early 2025) providing a turnkey neocloud / GPU-as-a-Service (GPUaaS)
+  platform that lets service providers, telcos and hosts turn NVIDIA GPU fleets
+  into high-margin, multi-tenant AI cloud infrastructure. The platform delivers
+  software-defined GPU orchestration (multi-tenant pooling, adaptive scheduling,
+  GPU overcommit 2x-10x), monetization and neocloud operations (billing,
+  metering, user management, white-label self-service panels), and a GPU Mesh
+  wholesale capacity network. It exposes a full REST API across an Admin Panel
+  API (GPUaaS infrastructure: pools, nodes, GPU/NPU discovery, high
+  availability, floating IPs) and a User Panel API, documented at docs.hosted.ai
+  and Swagger-generated, with bearer API-token authentication, IP allowlisting,
+  and prebuilt integrations for WHMCS, HubSpot and Stripe.
 url: https://raw.githubusercontent.com/api-evangelist/hosted-ai/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,11 +35,46 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Ai
-apis: []
+- GPU
+- GPUaaS
+- Cloud Infrastructure
+- Neocloud
+- Machine Learning
+- AI Infrastructure
+- Multi-Tenancy
+- Service Providers
+apis:
+- name: Hosted·ai Platform API
+  description: >-
+    REST API for the Hosted·ai neocloud platform, split into an Admin Panel API
+    (GPUaaS infrastructure: GPU pools, nodes, GPU/NPU hardware discovery, high
+    availability, floating IPs, regions) and a User Panel API (workspaces,
+    account settings, API tokens, billing). Swagger-documented (546 registered
+    routes / 550 operations as of Admin Panel 2.4.1). The API is served per
+    white-label deployment at the pattern base URL below; authentication is a
+    bearer API token created in the User Panel with optional IP allowlisting.
+  humanURL: https://docs.hosted.ai/
+  baseURL: https://USER_PANEL_URL/api
+  version: 2.4.1
+  properties:
+  - type: Documentation
+    url: https://docs.hosted.ai/
+  - type: APIReference
+    url: https://docs.hosted.ai/admin-panel/gpuaas/gpuaas-infrastructure-api
+  - type: Authentication
+    url: authentication/hosted-ai-authentication.yml
+  - type: ErrorCatalog
+    url: errors/hosted-ai-problem-types.yml
+  - type: Conventions
+    url: conventions/hosted-ai-conventions.yml
+  - type: DataModel
+    url: data-model/hosted-ai-data-model.yml
+  - type: MCPServer
+    url: mcp/hosted-ai-mcp.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +83,48 @@ maintainers:
 common:
 - type: Website
   url: https://hosted.ai/
+- type: DeveloperPortal
+  url: https://docs.hosted.ai/
+- type: Documentation
+  url: https://docs.hosted.ai/
+- type: APIReference
+  url: https://docs.hosted.ai/admin-panel/gpuaas/gpuaas-infrastructure-api
+- type: Pricing
+  url: https://www.hosted.ai/pricing
+- type: PrivacyPolicy
+  url: https://www.hosted.ai/hostedai-privacy-policy
+- type: Support
+  url: https://www.hosted.ai/contact
+- type: GitHubOrganization
+  url: https://github.com/hosted-ai
+- type: Authentication
+  url: authentication/hosted-ai-authentication.yml
+- type: ChangeLog
+  url: changelog/hosted-ai-changelog.yml
+- type: Lifecycle
+  url: lifecycle/hosted-ai-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/hosted-ai-lifecycle.yml
+- type: Conventions
+  url: conventions/hosted-ai-conventions.yml
+- type: ErrorCatalog
+  url: errors/hosted-ai-problem-types.yml
+- type: Packages
+  url: packages/hosted-ai-packages.yml
+- type: DomainSecurity
+  url: security/hosted-ai-domain-security.yml
+- type: Conformance
+  url: conformance/hosted-ai-conformance.yml
+- type: MCPServer
+  url: mcp/hosted-ai-mcp.yml
+- type: LLMsTxt
+  url: llms/hosted-ai-llms.txt
+- type: DataModel
+  url: data-model/hosted-ai-data-model.yml
+- type: AgentSkill
+  url: skills/_index.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
