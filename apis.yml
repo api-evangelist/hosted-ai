@@ -54,7 +54,7 @@ tags:
 - GPUaaS
 - Cloud Infrastructure
 - Neocloud
-- Machine-Learning
+- Machine Learning
 - AI Infrastructure
 - Multi-Tenancy
 - Service Providers
@@ -69,6 +69,7 @@ tags_raw:
 - AI Infrastructure
 - Multi-Tenancy
 - Service Providers
+- Machine-Learning
 apis:
 - name: Hosted·ai Platform API
   description: >-
