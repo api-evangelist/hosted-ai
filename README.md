@@ -64,6 +64,97 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Hosted·ai is a company surfaced as a portfolio company of creandum and added to the API Evangelist network as a stub for enrichment. Sector: ai. This profile is a lead awaiting the enrichment pipeline.
+Hosted·ai is a San Jose, California software company (founded 2024, public launch early 2025) providing a turnkey neocloud / GPU-as-a-Service (GPUaaS) platform that lets service providers, telcos and hosts turn NVIDIA GPU fleets into high-margin, multi-tenant AI cloud infrastructure. The platform delivers software-defined GPU orchestration (multi-tenant pooling, adaptive scheduling, GPU overcommit 2x-10x), monetization and neocloud operations (billing, metering, user management, white-label self-service panels), and a GPU Mesh wholesale capacity network. It exposes a full REST API across an Admin Panel API (GPUaaS infrastructure: pools, nodes, GPU/NPU discovery, high availability, floating IPs) and a User Panel API, documented at docs.hosted.ai and Swagger-generated, with bearer API-token authentication, IP allowlisting, and prebuilt integrations for WHMCS, HubSpot and Stripe.
 
-Backed by: creandum — https://hosted.ai/
+**Areas:** Company · Artificial Intelligence · GPU · GPUaaS · Cloud Infrastructure · Neocloud · Machine Learning · AI Infrastructure · Multi-Tenancy · Service Providers
+
+## Hosted·ai on APIs.io
+
+Everything profiled for Hosted·ai is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/hosted-ai/](https://apis.io/providers/hosted-ai/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Hosted·ai Platform API](https://apis.io/apis/hosted-ai/hostedai-platform-api/) — REST API for the Hosted·ai neocloud platform, split into an Admin Panel API (GPUaaS infrastructure: GPU pools, nodes, GPU/NPU hardware discovery, high…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [hosted-ai](https://apis.io/servers/hosted-ai/hosted-ai/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Hosted Ai Authentication](https://apis.io/security/hosted-ai/hosted-ai-authentication/)
+- [Hosted Ai Domain Security](https://apis.io/security/hosted-ai/hosted-ai-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://hosted.ai/)
+- [Documentation](https://docs.hosted.ai/)
+- [API reference](https://docs.hosted.ai/admin-panel/gpuaas/gpuaas-infrastructure-api)
+- [Pricing](https://www.hosted.ai/pricing)
+- [Support](https://www.hosted.ai/contact)
+- [Blog](https://www.hosted.ai/blog)
+- [Privacy policy](https://www.hosted.ai/hostedai-privacy-policy)
+- [GitHub](https://github.com/hosted-ai)
+
+## API Evangelist rating
+
+**Kin Score 25.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 47.0 |
+| Access clarity | 21.1 |
+
+**Agent readiness 6.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.1** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/hosted-ai/](https://apis.io/providers/hosted-ai/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Hosted·ai: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/hosted-ai/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
